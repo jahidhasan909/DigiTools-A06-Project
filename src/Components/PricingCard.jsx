@@ -4,7 +4,7 @@ import { FaCheck } from "react-icons/fa6";
 
 const PricingCard = () => {
     return (
-        <div className='bg-base-300 mt-32'>
+        <div className='mt-32'>
             <div className='px-50 py-28'>
                 <h1 className='text-center mt font-bold text-4xl'>Simple, Transparent Pricing</h1>
                 <p className='text-center mt-4 text-gray-400 text-[0.74rem]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
