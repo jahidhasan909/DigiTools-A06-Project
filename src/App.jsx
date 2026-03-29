@@ -2,6 +2,7 @@
 import './App.css'
 import Banner from './Components/Banner'
 import CardSection from './Components/CardSection'
+import Footer from './Components/Footer'
 import MiddleCountBanner from './Components/MiddleCountBanner'
 import Navbar from './Components/Navbar'
 import PricingCard from './Components/PricingCard'
@@ -20,6 +21,7 @@ function App() {
       <ThreeStepCard></ThreeStepCard>
       <PricingCard></PricingCard>
       <ReadySection></ReadySection>
+      <Footer></Footer>
     </>
   )
 }
