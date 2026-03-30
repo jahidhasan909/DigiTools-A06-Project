@@ -1,5 +1,5 @@
 
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Banner from './Components/Banner'
 import CardSection from './Components/CardSection'
@@ -20,15 +20,16 @@ function App() {
 
 
   const fillterData = fillterDataFatch();
+  const [selectCart, setSelectCart] = useState([])
 
   return (
 
     <>
-      <Navbar></Navbar>
+      <Navbar selectCart={selectCart}></Navbar>
       <Banner></Banner>
       <MiddleCountBanner></MiddleCountBanner>
       <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
-        <CardSection fillterData={fillterData}></CardSection>
+        <CardSection fillterData={fillterData} selectCart={selectCart} setSelectCart={setSelectCart}></CardSection>
       </Suspense>
       <ThreeStepCard></ThreeStepCard>
       <PricingCard></PricingCard>

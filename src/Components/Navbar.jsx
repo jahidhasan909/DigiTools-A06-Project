@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoCartOutline } from "react-icons/io5";
 
-const Navbar = () => {
+const Navbar = ({ selectCart }) => {
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm container mx-auto">
@@ -32,7 +32,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-2">
-                    <button>
+                    <button className=' relative'>
+                        <p className={`absolute left-1/2 -translate-1/2 right-2 ${selectCart.length === 0 ? '' : 'text-red-400'}`}>{selectCart.length}</p>
                         <IoCartOutline />
                     </button>
                     <a>Login</a>

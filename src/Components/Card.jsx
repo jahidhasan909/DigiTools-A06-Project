@@ -1,13 +1,21 @@
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
 
-const Card = ({ details }) => {
+const Card = ({ details, setSelectCart, selectCart}) => {
+
+
+    const handleBuyNow = () => {
+        setSelectCart([...selectCart, details])
+    }
     return (
 
         <div className="bg-base-100 w-80 h-[360px]  shadow-sm rounded-xl p-5 space-y-3">
             <div className='flex justify-between items-center'>
                 <img src={details.icon} alt="" />
-                <span className='badge'>{details.tag}</span>
+                <span className={`badge 
+                    ${details.tag === 'Best Seller' ?
+                        'bg-amber-100 text-orange-700' :
+                        details.tag === 'New' ? 'bg-green-200 text-green-800' : 'bg-purple-200 text-purple-500'}`}>{details.tag}</span>
             </div>
             <div className="">
                 <h2 className="text-xl font-semibold">{details.name}</h2>
@@ -21,7 +29,7 @@ const Card = ({ details }) => {
                 details.features.map((fe, index) => <li key={index} className='flex items-center gap-2 text-neutral/50'><FaCheck className='text-green-500' />{fe}</li>)
             }
             </ul>
-            <button className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-3xl w-full'>Buy Now</button>
+            <button onClick={handleBuyNow} className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-3xl w-full'>Buy Now</button>
         </div>
 
     );
