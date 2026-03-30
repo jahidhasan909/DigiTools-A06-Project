@@ -1,4 +1,5 @@
 
+import { Suspense } from 'react'
 import './App.css'
 import Banner from './Components/Banner'
 import CardSection from './Components/CardSection'
@@ -9,15 +10,26 @@ import PricingCard from './Components/PricingCard'
 import ReadySection from './Components/ReadySection'
 import ThreeStepCard from './Components/ThreeStepCard'
 
+
+
+const fillterDataFatch = async () => {
+  const res = await fetch('/data.json')
+  return res.json();
+}
 function App() {
 
 
+  const fillterData = fillterDataFatch();
+
   return (
+
     <>
       <Navbar></Navbar>
       <Banner></Banner>
       <MiddleCountBanner></MiddleCountBanner>
-      <CardSection></CardSection>
+      <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
+        <CardSection fillterData={fillterData}></CardSection>
+      </Suspense>
       <ThreeStepCard></ThreeStepCard>
       <PricingCard></PricingCard>
       <ReadySection></ReadySection>

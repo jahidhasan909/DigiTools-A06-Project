@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import ProductsTap from './ProductsTap';
 import CartTap from './CartTap';
 
-const CardSection = () => {
+const CardSection = ({ fillterData }) => {
+    const data = use(fillterData);
 
 
     const [selectType, setSelectType] = useState('products')
 
     return (
-        <div className='mt-20 space-y-3'>
+        <div className='mt-26 space-y-3'>
             <h1 className='text-center font-bold text-4xl'>Premium Digital Tools</h1>
             <p className='text-center text-neutral/50'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
             <div className='flex justify-center items-center'>
@@ -17,9 +18,9 @@ const CardSection = () => {
                 ${selectType === 'Cart' ? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white' : ''}
                     btn rounded-3xl `}>Cart (2)</button>
             </div>
-            {selectType === 'products' ? 
-            <ProductsTap></ProductsTap> : 
-            <CartTap></CartTap>}
+            {selectType === 'products' ?
+                <ProductsTap data={data}></ProductsTap> :
+                <CartTap></CartTap>}
         </div>
     );
 };

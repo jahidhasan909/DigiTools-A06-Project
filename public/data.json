@@ -2,9 +2,9 @@
     {
         "id": 1,
         "name": "AI Writing Pro",
-        " description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
+        "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
         "price": 29,
-        " period": "monthly",
+        "period": "Mo",
         "tag": "Best Seller",
         "tagType": "best-seller",
         "features": [
@@ -34,10 +34,10 @@
         "name": "Premium Stock Assets",
         "description": "Access millions of royalty-free photos, videos, and graphics for your projects.",
         "price": 19,
-        "period": "monthly",
+        "period": "MO",
         "tag": "New",
         "tagType": "new",
-        " features": [
+        "features": [
             "10M+ assets",
             "Commercial use",
             "No attribution required"
@@ -49,8 +49,8 @@
         "name": "Automation Toolkit",
         "description": "Automate repetitive tasks and streamline your workflow with powerful tools.",
         "price": 79,
-        "period": "monthly",
-        " tag": "Popular",
+        "period": "Mo",
+        "tag": "Popular",
         "tagType": "popular",
         "features": [
             "50+ automations",
@@ -64,7 +64,7 @@
         "name": "Resume Builder Pro",
         "description": "Create professional resumes and cover letters that land interviews.",
         "price": 15,
-        " period": "one-time",
+        "period": "one-time",
         "tag": "New",
         "tagType": "new",
         "features": [
@@ -78,8 +78,8 @@
         "id": 6,
         "name": "Social Media Content Kit",
         "description": "Complete toolkit for creating engaging social media content across platforms.",
-        " price": 39,
-        "period": "monthly",
+        "price": 39,
+        "period": "Mo",
         "tag": "Best Seller",
         "tagType": "best-seller",
         "features": [
