@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ProductsTap from './ProductsTap';
+import CartTap from './CartTap';
 
 const CardSection = () => {
 
@@ -15,9 +17,9 @@ const CardSection = () => {
                 ${selectType === 'Cart' ? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white' : ''}
                     btn rounded-3xl `}>Cart (2)</button>
             </div>
-            <div className='bg-gray-500 py-80'>
-
-            </div>
+            {selectType === 'products' ? 
+            <ProductsTap></ProductsTap> : 
+            <CartTap></CartTap>}
         </div>
     );
 };
