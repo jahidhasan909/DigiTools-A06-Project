@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 
 const Card = ({ details, setSelectCart, selectCart }) => {
@@ -9,6 +10,7 @@ const Card = ({ details, setSelectCart, selectCart }) => {
     const handleBuyNow = () => {
         setBuyNowClick(true)
         setSelectCart([...selectCart, details])
+        toast.success('Added to cart successful')
     }
     return (
 

@@ -9,6 +9,7 @@ import Navbar from './Components/Navbar'
 import PricingCard from './Components/PricingCard'
 import ReadySection from './Components/ReadySection'
 import ThreeStepCard from './Components/ThreeStepCard'
+import { ToastContainer } from 'react-toastify'
 
 
 
@@ -35,6 +36,7 @@ function App() {
       <PricingCard></PricingCard>
       <ReadySection></ReadySection>
       <Footer></Footer>
+      <ToastContainer />
     </>
   )
 }
