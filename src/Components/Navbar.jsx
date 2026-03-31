@@ -3,8 +3,8 @@ import { IoCartOutline } from "react-icons/io5";
 
 const Navbar = ({ selectCart }) => {
     return (
-        <div>
-            <div className="navbar bg-base-100 shadow-sm container mx-auto">
+        <div className=''>
+            <div className=" navbar   fixed z-50 bg-base-100 shadow-sm md:px-[115px]">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,7 +20,7 @@ const Navbar = ({ selectCart }) => {
                             <li>FAQ</li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-2xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-transparent bg-clip-text">DigiTools</a>
+                    <a className="btn btn-ghost text-xl md:text-3xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-transparent bg-clip-text">DigiTools</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-4">
@@ -33,7 +33,7 @@ const Navbar = ({ selectCart }) => {
                 </div>
                 <div className="navbar-end gap-2">
                     <button className=' relative'>
-                        <p className={`absolute left-1/2 -translate-1/2 right-2 ${selectCart.length === 0 ? 'hidden' : 'text-red-400 font-bold'}`}>{selectCart.length}</p>
+                        <p className={`absolute left-1/2 -translate-1/2 right-2 ${selectCart.length === 0 ? 'hidden' : 'text-red-400 font-bold text-xl'}`}>{selectCart.length}</p>
                         <IoCartOutline />
                     </button>
                     <a>Login</a>

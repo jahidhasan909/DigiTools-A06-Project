@@ -1,12 +1,12 @@
 import React from 'react';
 import Card from './Card';
 
-const ProductsTap = ({ data,setSelectCart,selectCart }) => {
+const ProductsTap = ({ data, setSelectCart, selectCart }) => {
 
 
 
     return (
-        <div className='grid grid-cols-3 container mx-auto gap-3 px-36 mt-5'>
+        <div className='grid  grid-cols-1 md:grid-cols-3 container mx-auto gap-3 px-10 md:px-36 mt-5'>
             {
                 data.map(details => {
                     return (

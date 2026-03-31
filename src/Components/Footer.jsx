@@ -9,7 +9,7 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
     return (
         <div className='bg-[#101727]/100 py-5'>
-            <footer className="footer sm:footer-horizontal  px-[200px] py-[120px] text-white container mx-auto">
+            <footer className="footer sm:footer-horizontal px-10 py-10  md:px-[200px] md:py-[120px] text-white container mx-auto">
                 <div>
                     <h1 className='text-3xl'>DigiTools</h1>
                     <p>Premium digital tools for creators, <br /> professionals, and businesses. Work smarter <br /> with our suite  of powerful tools.</p>

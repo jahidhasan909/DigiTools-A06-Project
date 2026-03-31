@@ -35,6 +35,7 @@ const Card = ({ details, setSelectCart, selectCart }) => {
             }
             </ul>
             <button
+                type='button'
                 onClick={handleBuyNow}
                 disabled={buyNowClick === true ? true : false}
                 className={`btn 

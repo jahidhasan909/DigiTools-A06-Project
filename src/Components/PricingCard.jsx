@@ -5,10 +5,10 @@ import { FaCheck } from "react-icons/fa6";
 const PricingCard = () => {
     return (
         <div className='mt-32'>
-            <div className='px-50 py-28'>
-                <h1 className='text-center mt font-bold text-4xl'>Simple, Transparent Pricing</h1>
-                <p className='text-center mt-4 text-gray-400 text-[0.74rem]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
-                <div className='grid grid-cols-3 container mx-auto mt-10 gap-3'>
+            <div className='px-10 md:px-50 md:py-28'>
+                <h1 className='text-center mt font-bold text-2xl md:text-4xl'>Simple, Transparent Pricing</h1>
+                <p className='text-center mt-4 text-gray-400 text-[0.74rem] md:text-[0.83rem]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
+                <div className='grid grid-cols-1 md:grid-cols-3 container mx-auto mt-10 gap-3'>
                     <div className=" bg-base-100 w-80 h-[360px]  shadow-sm rounded-xl p-5 space-y-3">
                         <div className="">
                             <h2 className="text-2xl font-semibold">Starter</h2>
