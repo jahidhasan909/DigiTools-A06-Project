@@ -1,16 +1,58 @@
-# React + Vite
+Digitools একটি React ভিত্তিক ই-কমার্স প্রজেক্ট যেখানে Product এবং Cart সিস্টেম সম্পূর্ণভাবে React Hooks ব্যবহার করে তৈরি করা হয়েছে।
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Overview:
+এই প্রজেক্টে প্রথমে সম্পূর্ণ স্ট্যাটিক ডিজাইন তৈরি করা হয়েছে, এরপর ধাপে ধাপে ডাইনামিক ফাংশনালিটি যুক্ত করা হয়েছে।
 
-Currently, two official plugins are available:
+Static Sections:
+Navbar
+Banner
+Footer others..
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Data Management:
+Custom JSON data তৈরি করে public ফোল্ডারে রাখা হয়েছে
+fetch() ব্যবহার করে data load করা হয়েছে
+Suspense ব্যবহার করা হয়েছে
+useState দিয়ে state management করা হয়েছে
+props এর মাধ্যমে data component গুলোতে পাঠানো হয়েছে
 
-## React Compiler
+Product & Cart System:
+Add to Cart Functionality
+"Buy Now" বাটনে ক্লিক করলে প্রোডাক্ট Cart এ যুক্ত হয়
+useState ব্যবহার করে cart manage করা হয়েছে
+বাটন disable হয়ে যায়
+Button text পরিবর্তন হয়ে "Added to Cart" হয়
+Button color green হয়ে যায়
+Navbar এ cart count update হয়
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Toggle System:
+Product Tab এবং Cart Tab এর মধ্যে toggle system রয়েছে
 
-## Expanding the ESLint configuration
+Remove Product System:
+Cart section এ প্রতিটি product এর পাশে Remove button রয়েছে
+filter() method ব্যবহার করে product remove করা হয়েছে
+Remove করার সাথে সাথে total price update হয়
+Toastify notification দেখানো হয়
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Total Price Calculation:
+reduce() method ব্যবহার করে total price হিসাব করা হয়েছে
+Product add বা remove করলে total price automatic update হয়
+
+Checkout System:
+"Process Checkout" button এ ক্লিক করলে
+Cart এর সব product remove হয়ে যায়
+Toastify notification দেখায়
+
+Notification System:
+React Toastify ব্যবহার করা হয়েছে
+নিচের action গুলোতে notification দেখানো হয়:
+Add to Cart
+Remove Product
+Checkout Complete
+
+Technologies Used:
+React.js
+JavaScript (ES6)
+DaisyUi
+Tailwind CSS
+React Hooks (useState, useEffect)
+React Toastify
