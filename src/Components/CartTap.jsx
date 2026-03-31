@@ -1,6 +1,14 @@
 import React from 'react';
 
-const CartTap = ({ selectCart }) => {
+const CartTap = ({ selectCart, setSelectCart }) => {
+
+
+
+    const handleRemove = (details) => {
+        const fillterDatas = selectCart.filter((select => select.id !== details.id))
+        setSelectCart(fillterDatas)
+    }
+
     return (
         <div className='container mx-auto bg-base-300 p-5 rounded-md'>
             <h2 className='text-xl font-semibold'>Your Cart</h2>
@@ -21,7 +29,7 @@ const CartTap = ({ selectCart }) => {
                                             <p className='text-neutral/50'>${details.price}</p>
                                         </div>
                                     </div>
-                                    <p className='text-red-400'>Remove</p>
+                                    <p onClick={() => handleRemove(details)} className='text-red-400 btn'>Remove</p>
 
                                 </div>
                             )
@@ -32,7 +40,9 @@ const CartTap = ({ selectCart }) => {
 
             <div className='flex justify-between'>
                 <h3>Total:</h3>
-                <h3 className='font-semibold'>$</h3>
+                <h3 className='font-semibold'>$
+                    {selectCart.reduce((total, items) => total + items.price, 0)}
+                </h3>
             </div>
             <button className='btn w-full rounded-3xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white'>Proceed to Checkout</button>
         </div>

@@ -45,7 +45,7 @@
         "icon": "https://i.ibb.co.com/Q34pn8Z4/camera-8775444-1.png"
     },
     {
-        " id": 4,
+        "id": 4,
         "name": "Automation Toolkit",
         "description": "Automate repetitive tasks and streamline your workflow with powerful tools.",
         "price": 79,
@@ -60,7 +60,7 @@
         "icon": "https://i.ibb.co.com/6R5KWbKk/operation.png"
     },
     {
-        " id": 5,
+        "id": 5,
         "name": "Resume Builder Pro",
         "description": "Create professional resumes and cover letters that land interviews.",
         "price": 15,

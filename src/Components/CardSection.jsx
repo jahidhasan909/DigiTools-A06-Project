@@ -21,7 +21,7 @@ const CardSection = ({ fillterData,selectCart, setSelectCart }) => {
             </div>
             {selectType === 'products' ?
                 <ProductsTap data={data} selectCart={selectCart} setSelectCart={setSelectCart}></ProductsTap> :
-                <CartTap selectCart={selectCart}></CartTap>}
+                <CartTap selectCart={selectCart} setSelectCart={setSelectCart}></CartTap>}
         </div>
     );
 };
