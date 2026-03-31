@@ -2,11 +2,12 @@ import React from 'react';
 
 const CartTap = ({ selectCart }) => {
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto bg-base-300 p-5 rounded-md'>
             <h2 className='text-xl font-semibold'>Your Cart</h2>
             {selectCart.length === 0 ?
-                <div>
-                    <img className='w-80 mx-auto' src="https://i.ibb.co.com/XkrcpC6R/5166615.png" alt="" />
+                <div className='py-10'>
+                    <img className='w-60 h-52  mx-auto' src="https://i.ibb.co.com/XkrcpC6R/5166615.png" alt="" />
+                    <p className='text-center text-neutral/50'>Your cart is empty</p>
                 </div> :
                 <div className=' space-y-4'>
                     {

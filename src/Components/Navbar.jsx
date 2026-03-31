@@ -33,7 +33,7 @@ const Navbar = ({ selectCart }) => {
                 </div>
                 <div className="navbar-end gap-2">
                     <button className=' relative'>
-                        <p className={`absolute left-1/2 -translate-1/2 right-2 ${selectCart.length === 0 ? '' : 'text-red-400'}`}>{selectCart.length}</p>
+                        <p className={`absolute left-1/2 -translate-1/2 right-2 ${selectCart.length === 0 ? 'hidden' : 'text-red-400 font-bold'}`}>{selectCart.length}</p>
                         <IoCartOutline />
                     </button>
                     <a>Login</a>

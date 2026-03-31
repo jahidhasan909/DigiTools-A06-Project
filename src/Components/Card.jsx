@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
 
-const Card = ({ details, setSelectCart, selectCart}) => {
+
+const Card = ({ details, setSelectCart, selectCart }) => {
 
 
+    const [buyNowClick, setBuyNowClick] = useState(false)
     const handleBuyNow = () => {
+        setBuyNowClick(true)
         setSelectCart([...selectCart, details])
     }
     return (
@@ -29,7 +32,16 @@ const Card = ({ details, setSelectCart, selectCart}) => {
                 details.features.map((fe, index) => <li key={index} className='flex items-center gap-2 text-neutral/50'><FaCheck className='text-green-500' />{fe}</li>)
             }
             </ul>
-            <button onClick={handleBuyNow} className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-3xl w-full'>Buy Now</button>
+            <button
+                onClick={handleBuyNow}
+                disabled={buyNowClick === true ? true : false}
+                className={`btn 
+            ${buyNowClick === true ? 'bg-green-600 text-white' :
+                        'bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white'} 
+            rounded-3xl w-full `}>
+                {buyNowClick === true ?
+                    ' Added to Cart' :
+                    'Buy Now'}</button>
         </div>
 
     );
